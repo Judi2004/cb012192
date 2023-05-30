@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Bebas+Neue|Oswald|Caveat|Sora');
+
+:root{
+    --green:rgb(2, 102, 130);
+    --bggreen:rgb(0, 159, 203);
+    --space:5%
+}
+body{
+    margin: 0px;
+}
+nav{
+    float: left;
+    background-color:var(--green);
+    padding: 1.5%;
+    min-width: 100%;
+    font-family:Oswald;
+    
+}
+nav ul li a, nav li{
+    text-decoration: none;
+    color: white;
+}
+nav ul, nav li{
+    list-style-type: none;
+    display: inline;
+    padding: 1.5%;
+    font-size: 2vw;
+    font-weight: bold;
+}
+nav a:hover{
+    background-color:white;
+    color:var(--green);
+}
+.active{
+    background-color:white;
+    color:var(--green);
+    
+}
+  .subnav{
+    position: relative;
+    display: inline-block;
+    padding: 1.5%;
+  }
+  .subnav-content {
+    display: none;
+    position: absolute;
+    background-color:var(--green);
+    padding:1.5%;
+    min-width: 160%;
+  }
+  .subnav-content a{
+    display: inline-block;
+    float: none;
+    padding: 1.5%;
+  }
+  
+  .subnav-content a:hover {
+    background-color:white;
+    color:var(--green);
+  }
+  
+.subnav:hover .subnav-content {
+    display:block;
+  }
+header{ background-image: url(./MainImg1.1.webp);
+    text-align: start;
+    background-repeat: no-repeat;
+    
+}
+header h1{
+    font-family: "Lobster";
+    font-size: 5vw;
+    
+}
+header h2{
+    font-family:Caveat;
+    font-size: 3vw;
+    
+}
+.headcontain{
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto;
+    
+}
+.head1{
+    grid-area: 1/1/2/2;
+}
+.head2{
+    grid-area: 1/2/2/3;
+    color: white;
+    text-align:start;
+}
+.head1 img{
+    width:100%;
+   animation-name: headimg;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes headimg{
+    from{width:100%;}
+    to{width:70%;}
+}
+.seccontain{
+    margin-top:10%;
+    display: grid;
+    grid-template-columns:35% 33% 32%;
+    grid-template-rows: auto;
+}
+/*.seccontain>div{
+    border: 5px solid black;
+}*/
+.seccontain h1{
+    text-align: center;
+    color: var(--green);
+    font-family:Caveat;
+    font-size: 50px;
+}
+input[type=button]{
+    background-color:var(--green);
+    width:75%;
+    height:10%;
+    border: 2px solid var(--green);
+    border-radius:25px;
+    color: white;
+    font-size:100%;
+    font-weight:bold;
+    margin-top:5% ;
+}
+input[type=button]:hover{
+    background-color:var(--bggreen);
+    transform: translateY(4px);
+
+}
+.secitem1 ol li{
+    font-size:125% ;
+    font-family:'Times New Roman', Times, serif ;
+    
+}
+.overflow h2{
+    color: var(--green);
+    font-family:Caveat;
+    font-size:250%;
+}
+.secitem1{
+    grid-area: 1/1/2/2;
+    padding-left: 5%;
+}
+.secitem2{
+    grid-area: 1/2/2/3;
+    margin-bottom:5%;
+    background-color: rgb(173, 173, 173);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: var(--space);
+}
+.secitem2 img, .secitem3 img {
+    box-shadow: 8px 8px 15px var(--green);
+    max-width:100%;
+}
+.secitem2 img:hover ,.secitem3 img:hover{
+    border: 5px solid var(--green);
+}
+.secitem3{
+    grid-area: 1/3/2/4;
+    margin-bottom: 5%;
+    background-color: rgb(173, 173, 173);
+    padding: var(--space);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.secitem4{
+    grid-area: 2/1/3/2;
+    margin-left:2%;
+}
+.secitem5{
+    grid-area: 2/2/3/3;
+}
+.secitem6{
+    grid-area: 2/3/3/4;
+}
+
+
+.overflow{
+    overflow: auto;
+    height:550px;
+    width:85%;
+    border: 5px solid var(--green);
+    padding:3%;
+    text-align: center;
+    border-radius:5px;
+    box-shadow: 5px 5px 15px var(--green);
+
+}
+.overflow > p{
+    text-align: justify;
+    font-size:150%;
+    font-family:Oswald ;
+}
+.secitem7{
+    grid-area: 3/1/4/4;
+    margin-top:var(--space);
+    margin-left:var(--space);
+    font-size: 25px;
+    font-weight: bold;
+}
+.secitem7 a{
+    color: red;
+}
+.footsec{
+    display:grid;
+    grid-template-columns:10% 90%;
+    grid-template-rows: auto;
+    background-color:var(--green);
+    color: white;
+    font-size: 120%;
+    margin-top:2%;
+}
+.foot1{
+    grid-area:1/1/2/2 ;
+    margin-left:2%;
+}
+.foot2{
+    grid-area:1/2/2/3;
+    font-family: "Lobster";
+}
+.foot3{
+    grid-area:2/1/3/3;
+    margin-left:2%;
+    margin-right: 3%;
+}
+.foot4{
+    grid-area:3/1/4/3 ;
+    margin-left:2%;
+}
+footer a{
+    color:rgb(171, 0, 0);
+    text-decoration: none;
+    float: left;
+    padding-right: 5%;
+    font-weight: bold;
+}
+footer img{
+    width: 80px;
+    text-align: left;
+}
+footer p{
+    color: black;
+    text-align: justify;
+    
+}
+footer a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width:805px) {
+    nav{
+        float:none;
+    }
+    
+    nav ul, nav li{
+        display: flex;flex-direction: column; 
+        font-size:105%;
+    }
+    .seccontain{
+        margin-top:8%;
+        display: grid;
+    }
+    .seccontain{
+        margin-top:8%;
+        display: grid;
+        grid-template-columns:50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+    }
+    /*.seccontain>div{
+        border: 5px solid black;
+    }*/
+    .secitem1{
+        grid-area: 1/1/2/3;
+        padding-left: 5%;
+    }
+    .secitem2{
+        grid-area: 6/1/7/3;
+        padding:7%;
+        background-color: rgb(173, 173, 173);
+        max-height:100%;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 25px;
+
+    }
+    .secitem3{
+        grid-area:7/1/8/3;
+        margin-left: 0%;
+        padding:3%;
+        background-color: rgb(173, 173, 173);
+        padding-bottom:10%;
+        max-height:100%;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius:0px;
+        border-bottom-left-radius: 25px;
+
+    }
+    .secitem2 img:hover ,.secitem3 img:hover{
+        border: 3px solid var(--green);
+    }
+    .secitem4{
+        grid-area: 2/1/3/3;
+        margin-left:0%;
+        padding: var(--space);
+    }
+    .secitem5{
+        grid-area: 3/1/4/3;
+        padding: var(--space);
+    }
+    .secitem6{
+        grid-area: 4/1/5/3;
+        padding: var(--space);
+    }
+    .secitem7{
+        grid-area:5/1/6/3 ;
+        padding-bottom: var(--space);
+    }
+    
+    .overflow{
+        width:95%;
+    }
+    .footsec{
+        grid-template-columns:20% 80%;
+    }
+} 
