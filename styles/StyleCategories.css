@@ -381,7 +381,7 @@ footer a:hover{
         border: 1px solid var(--green);
     }
     td,th{
-        font-size:100%;
+        font-size:80%;
     }
     .footsec{
         grid-template-columns:20% 80%;
