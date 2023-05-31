@@ -122,6 +122,9 @@ header h2{
     grid-area:2/1/3/3;
     padding: var(--padding);
 }
+iframe{
+    width:100%;
+}
 .secitem3{
     grid-area: 2/3/3/5;
     padding: var(--padding);
